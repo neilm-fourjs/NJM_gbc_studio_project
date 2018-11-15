@@ -1,0 +1,84 @@
+# FOURJS_START_COPYRIGHT(U,2002)
+# Property of Four Js*
+# (c) Copyright Four Js 2002, 2016. All Rights Reserved.
+# * Trademark of Four Js Development Tools Europe Ltd
+#   in the United States and elsewhere
+# 
+# Four Js and its suppliers do not warrant or guarantee that these samples are
+# accurate and suitable for your purposes.
+# Their inclusion is purely for information purposes only.
+# FOURJS_END_COPYRIGHT
+SCHEMA custdemo
+
+TOOLBAR
+  ITEM new (TEXT="Order", IMAGE="new", COMMENT="New order")
+  ITEM find (TEXT="Find", IMAGE="find")
+  SEPARATOR
+  ITEM append (TEXT="Line", IMAGE="new", COMMENT="New order line")
+  ITEM delete (TEXT="Del", IMAGE="eraser")
+  SEPARATOR
+  ITEM previous (TEXT="Prev")
+  ITEM next (TEXT="Next")
+  SEPARATOR
+  ITEM getitems (TEXT="Items", IMAGE="prop")     
+  SEPARATOR
+  ITEM quit (TEXT="Quit", COMMENT="Exit the program", IMAGE="quit")
+END
+
+LAYOUT
+ VBOX 
+  GROUP
+    GRID
+    {
+      Store #:[f01  ] [f02                                          ]  
+      Order #:[f03  ]  Order Date:[f04         ] Ship By:[f06       ]
+      Factory:[f05  ]             [f07                              ]   
+                                         Order Total:[f14           ]
+    }
+    END
+  END -- GROUP
+  TABLE
+   {
+     Stock#  Description       Qty     Unit    Price       Total
+    [f08    |f09              |f10    |f11    |f12        |f13      ]
+    [f08    |f09              |f10    |f11    |f12        |f13      ]
+    [f08    |f09              |f10    |f11    |f12        |f13      ]
+    [f08    |f09              |f10    |f11    |f12        |f13      ]
+   }
+  END
+ END -- VBOX 
+END 
+
+TABLES
+  customer, orders, items, stock
+END
+
+ATTRIBUTES
+BUTTONEDIT f01 = orders.store_num, REQUIRED, ACTION=zoom1, IMAGE = "quest";
+EDIT       f02 = customer.store_name, NOENTRY;
+EDIT       f03 = orders.order_num, NOENTRY;
+DATEEDIT   f04 = orders.order_date;
+EDIT       f05 = orders.fac_code, UPSHIFT;
+EDIT       f06 = orders.ship_instr;
+CHECKBOX   f07 = orders.promo, TEXT="Promotional",
+                 VALUEUNCHECKED="N", VALUECHECKED="Y"; 
+BUTTONEDIT f08 = items.stock_num, REQUIRED, ACTION=zoom2;
+LABEL      f09 = stock.description;
+EDIT       f10 = items.quantity, REQUIRED;
+LABEL      f11 = stock.unit;
+LABEL      f12 = items.price;
+LABEL      f13 = formonly.line_total TYPE DECIMAL(9,2);
+EDIT       f14 = formonly.order_total TYPE DECIMAL(9,2), NOENTRY;
+END
+
+INSTRUCTIONS
+SCREEN RECORD sa_items(
+   items.stock_num,
+   stock.description,
+   items.quantity,
+   stock.unit,
+   items.price,
+   line_total
+  )
+END
+

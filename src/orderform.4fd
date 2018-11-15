@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagedForm databaseName="custdemo" fileVersion="30a00" gstVersion="30a0a" name="ManagedForm" uid="{b6e1af63-1b95-43e4-89a1-7c68ff30f3f3}">
+  <AGSettings/>
+  <Record name="sa_items" uid="{5e4f12b8-05d6-47aa-8174-918ae8b8720d}">
+    <RecordField colName="stock_num" fieldIdRef="7" fieldType="TABLE_COLUMN" name="items.stock_num" sqlTabName="items" uid="{2cc8b39f-6fc0-4ce7-8eb9-d66c25fae438}"/>
+    <RecordField colName="description" fieldIdRef="8" fieldType="TABLE_COLUMN" name="stock.description" sqlTabName="stock" uid="{5f65d7cf-8706-4d48-a342-d33a10087cf2}"/>
+    <RecordField colName="quantity" fieldIdRef="9" fieldType="TABLE_COLUMN" name="items.quantity" sqlTabName="items" uid="{c164e9b1-3016-4262-99a7-5fb195d9a33f}"/>
+    <RecordField colName="unit" fieldIdRef="10" fieldType="TABLE_COLUMN" name="stock.unit" sqlTabName="stock" uid="{455e582c-f752-4c16-85ab-11e1616961ca}"/>
+    <RecordField colName="price" fieldIdRef="11" fieldType="TABLE_COLUMN" name="items.price" sqlTabName="items" uid="{f651b05a-6861-46e0-9f0e-4ed4635ee6cf}"/>
+    <RecordField colName="line_total" fieldIdRef="12" name="line_total" precisionDecimal="9" scaleDecimal="2" sqlTabName="formonly" sqlType="DECIMAL" uid="{d683c70c-b1df-498e-89a1-c7febf9b51c3}"/>
+  </Record>
+  <Record name="record1" uid="{4514643e-b0d8-4201-91ab-66f82b79b2d6}">
+    <RecordField colName="store_num" fieldIdRef="0" fieldType="TABLE_COLUMN" name="orders.store_num" sqlTabName="orders" uid="{73354024-0587-4b9e-a98a-2e0591fc815c}"/>
+    <RecordField colName="store_name" fieldIdRef="1" fieldType="TABLE_COLUMN" name="customer.store_name" sqlTabName="customer" uid="{0a8ccac0-b1e0-45ef-984c-f0aa186ee187}"/>
+    <RecordField colName="order_num" fieldIdRef="2" fieldType="TABLE_COLUMN" name="orders.order_num" sqlTabName="orders" uid="{3753ecf3-7c11-4ebf-948f-6eae58bdb877}"/>
+    <RecordField colName="order_date" fieldIdRef="3" fieldType="TABLE_COLUMN" name="orders.order_date" sqlTabName="orders" uid="{8b35aed5-c164-48e2-a9f0-861555ecc359}"/>
+    <RecordField colName="ship_instr" fieldIdRef="5" fieldType="TABLE_COLUMN" name="orders.ship_instr" sqlTabName="orders" uid="{024f67f5-57a2-4946-bc39-bac28c7b95da}"/>
+    <RecordField colName="fac_code" fieldIdRef="4" fieldType="TABLE_COLUMN" name="orders.fac_code" sqlTabName="orders" uid="{8d7fd97c-6bb8-48fe-a77b-b7d0b2534617}"/>
+    <RecordField colName="promo" fieldIdRef="6" fieldType="TABLE_COLUMN" name="orders.promo" sqlTabName="orders" uid="{4ca6ca33-0b6d-4f0e-b961-198e703110f2}"/>
+    <RecordField colName="order_total" fieldIdRef="13" name="order_total" precisionDecimal="9" scaleDecimal="2" sqlTabName="formonly" sqlType="DECIMAL" uid="{13f2f132-4b35-4c76-b63f-43e62cdd9f96}"/>
+  </Record>
+  <Form gridHeight="13" gridWidth="66" name="orderform" text="Orders">
+    <ToolBar name="toolbar1">
+      <ToolBarItem comment="New order" image="new" name="new" text="Order"/>
+      <ToolBarItem image="find" name="find" text="Find"/>
+      <ToolBarSeparator name="toolbarseparator1"/>
+      <ToolBarItem comment="New order line" image="new" name="append" text="Line"/>
+      <ToolBarItem image="eraser" name="delete" text="Del"/>
+      <ToolBarSeparator name="toolbarseparator2"/>
+      <ToolBarItem name="previous" text="Prev"/>
+      <ToolBarItem name="next" text="Next"/>
+      <ToolBarSeparator name="toolbarseparator3"/>
+      <ToolBarItem image="prop" name="getitems" text="Items"/>
+      <ToolBarSeparator name="toolbarseparator4"/>
+      <ToolBarItem comment="Exit the program" image="quit" name="quit" text="Quit"/>
+    </ToolBar>
+    <VBox gridHeight="13" gridWidth="66" name="vbox1" posX="0" posY="0">
+      <Group gridHeight="6" gridWidth="66" name="group1" posX="0" posY="1">
+        <Grid gridHeight="4" gridWidth="64" name="grid1" posX="1" posY="1">
+          <Label gridHeight="1" gridWidth="8" name="label1" posX="2" posY="0" text="Store #:"/>
+          <ButtonEdit action="zoom1" colName="store_num" fieldId="0" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="5" image="quest" name="orders.store_num" notNull="true" posX="11" posY="0" required="true" sqlTabName="orders" tabIndex="1" widget="ButtonEdit"/>
+          <Edit colName="store_name" fieldId="1" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="45" name="customer.store_name" noEntry="true" posX="19" posY="0" sqlTabName="customer" tabIndex="2" widget="Edit"/>
+          <Label gridHeight="1" gridWidth="8" name="label2" posX="2" posY="1" text="Order #:"/>
+          <Edit colName="order_num" fieldId="2" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="5" name="orders.order_num" noEntry="true" notNull="true" posX="11" posY="1" required="true" sqlTabName="orders" tabIndex="3" widget="Edit"/>
+          <Label gridHeight="1" gridWidth="11" name="label3" posX="19" posY="1" text="Order Date:"/>
+          <DateEdit colName="order_date" fieldId="3" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="12" name="orders.order_date" posX="31" posY="1" sqlTabName="orders" tabIndex="4" widget="DateEdit"/>
+          <Label gridHeight="1" gridWidth="8" name="label4" posX="45" posY="1" text="Ship By:"/>
+          <Edit colName="ship_instr" fieldId="5" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="10" name="orders.ship_instr" posX="54" posY="1" sqlTabName="orders" tabIndex="5" widget="Edit"/>
+          <Label gridHeight="1" gridWidth="8" name="label5" posX="2" posY="2" text="Factory:"/>
+          <Edit case="upper" colName="fac_code" fieldId="4" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="5" name="orders.fac_code" posX="11" posY="2" sqlTabName="orders" tabIndex="6" widget="Edit"/>
+          <CheckBox colName="promo" fieldId="6" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="33" name="orders.promo" posX="31" posY="2" sqlTabName="orders" tabIndex="7" text="Promotional" valueChecked="Y" valueUnchecked="N" widget="CheckBox"/>
+          <Label gridHeight="1" gridWidth="12" name="label6" posX="37" posY="3" text="Order Total:"/>
+          <Edit colName="order_total" fieldId="13" gridHeight="1" gridWidth="14" name="order_total" noEntry="true" posX="50" posY="3" precisionDecimal="9" scaleDecimal="2" sqlTabName="formonly" sqlType="DECIMAL" style="important" tabIndex="8" widget="Edit"/>
+        </Grid>
+      </Group>
+      <Table gridHeight="5" gridWidth="66" name="table1" posX="0" posY="7" totalRows="4">
+        <ButtonEdit action="zoom2" colName="stock_num" fieldId="7" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="7" name="items.stock_num" notNull="true" posX="0" posY="0" required="true" sqlTabName="items" tabIndex="9" title="Stock#" widget="ButtonEdit"/>
+        <FFLabel colName="description" fieldId="8" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="17" name="stock.description" posX="7" posY="0" sqlTabName="stock" title="Description" widget="FFLabel"/>
+        <Edit colName="quantity" fieldId="9" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="7" name="items.quantity" posX="24" posY="0" required="true" sqlTabName="items" tabIndex="11" title="Qty" widget="Edit"/>
+        <FFLabel colName="unit" fieldId="10" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="7" name="stock.unit" posX="31" posY="0" sqlTabName="stock" title="Unit" widget="FFLabel"/>
+        <FFLabel colName="price" fieldId="11" fieldType="TABLE_COLUMN" gridHeight="1" gridWidth="11" name="items.price" posX="38" posY="0" sqlTabName="items" title="Price" widget="FFLabel"/>
+        <FFLabel colName="line_total" fieldId="12" gridHeight="1" gridWidth="9" name="line_total" posX="49" posY="0" precisionDecimal="9" scaleDecimal="2" sqlTabName="formonly" sqlType="DECIMAL" title="Total" widget="FFLabel"/>
+      </Table>
+    </VBox>
+  </Form>
+  <DiagramLayout>
+    <![CDATA[AAAAAgAAAEwAewA0ADUAMQA0ADYANAAzAGUALQBiADAAZAA4AC0ANAAyADAAMQAtADkAMQBhAGIALQA2ADYAZgA4ADIAYgA3ADkAYgAyAGQANgB9QCQAAAPAAABAJAAAA8AAAAAAAAAAAAAAAQAAAEwAewA1AGUANABmADEAMgBiADgALQAwADUAZAA2AC0ANAA3AGEAYQAtADgAMQA3ADQALQA5ADEAOABhAGUAOABiADgANwAyADAAZAB9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ==]]>
+  </DiagramLayout>
+</ManagedForm>

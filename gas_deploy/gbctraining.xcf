@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ FOURJS_START_COPYRIGHT(P,2017)
+ Property of Four Js*
+ (c) Copyright Four Js 2017, 2018. All Rights Reserved.
+ * Trademark of Four Js Development Tools Europe Ltd
+   in the United States and elsewhere
+ FOURJS_END_COPYRIGHT
+-->
+<APPLICATION Parent="defaultgwc"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="http://www.4js.com/ns/gas/2.50/cfextwa.xsd">
+  <EXECUTION AllowUnsafeSession="TRUE">
+    <PATH>$(res.deployment.path)/.</PATH>
+    <MODULE>modify_form</MODULE>
+  </EXECUTION>
+ <UA_OUTPUT>
+  <PROXY>$(res.uaproxy.cmd)</PROXY>
+    <PUBLIC_IMAGEPATH>$(res.public.resources)</PUBLIC_IMAGEPATH>
+    <GBC>myCustomization</GBC>
+  </UA_OUTPUT>
+</APPLICATION>

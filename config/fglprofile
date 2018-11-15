@@ -1,0 +1,2 @@
+dbi.database.custdemo.source   = "custdemo.db"
+dbi.database.custdemo.driver   = "dbmsqt"
