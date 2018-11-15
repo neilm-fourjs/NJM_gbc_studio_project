@@ -95,7 +95,7 @@ MAIN
   CLOSE WINDOW w1
 
 END MAIN
-
+#+ @param has_order boolean has an order
 FUNCTION setup_actions(d, has_order, query_ok)
   DEFINE d ui.Dialog,
          has_order, query_ok SMALLINT

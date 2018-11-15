@@ -19,7 +19,7 @@
     <RecordField colName="promo" fieldIdRef="6" fieldType="TABLE_COLUMN" name="orders.promo" sqlTabName="orders" uid="{4ca6ca33-0b6d-4f0e-b961-198e703110f2}"/>
     <RecordField colName="order_total" fieldIdRef="13" name="order_total" precisionDecimal="9" scaleDecimal="2" sqlTabName="formonly" sqlType="DECIMAL" uid="{13f2f132-4b35-4c76-b63f-43e62cdd9f96}"/>
   </Record>
-  <Form gridHeight="13" gridWidth="66" name="orderform" text="Orders">
+  <Form gridHeight="13" gridWidth="66" name="orderform" text="Orders Demo">
     <ToolBar name="toolbar1">
       <ToolBarItem comment="New order" image="new" name="new" text="Order"/>
       <ToolBarItem image="find" name="find" text="Find"/>
@@ -64,6 +64,6 @@
     </VBox>
   </Form>
   <DiagramLayout>
-    <![CDATA[AAAAAgAAAEwAewA0ADUAMQA0ADYANAAzAGUALQBiADAAZAA4AC0ANAAyADAAMQAtADkAMQBhAGIALQA2ADYAZgA4ADIAYgA3ADkAYgAyAGQANgB9QCQAAAPAAABAJAAAA8AAAAAAAAAAAAAAAQAAAEwAewA1AGUANABmADEAMgBiADgALQAwADUAZAA2AC0ANAA3AGEAYQAtADgAMQA3ADQALQA5ADEAOABhAGUAOABiADgANwAyADAAZAB9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ==]]>
+    <![CDATA[AAAAAgAAAEwAewA0ADUAMQA0ADYANAAzAGUALQBiADAAZAA4AC0ANAAyADAAMQAtADkAMQBhAGIALQA2ADYAZgA4ADIAYgA3ADkAYgAyAGQANgB9QCQAAAUAAABAJAAABQAAAAAAAAAAAAAAAQAAAEwAewA1AGUANABmADEAMgBiADgALQAwADUAZAA2AC0ANAA3AGEAYQAtADgAMQA3ADQALQA5ADEAOABhAGUAOABiADgANwAyADAAZAB9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ==]]>
   </DiagramLayout>
 </ManagedForm>

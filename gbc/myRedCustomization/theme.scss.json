@@ -1,5 +1,6 @@
 {
-
+	"theme-primary-background-color": "$mt-red-900",
+	"theme-sidebar-always-visible-min-width" : "9999px",
   "theme-primary-emphasis-background-color": "$mt-red-500",
   "theme-primary-faded-background-color": "$mt-red-100",
   "theme-secondary-color": "$mt-grey-600"
