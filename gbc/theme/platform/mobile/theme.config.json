@@ -1,0 +1,9 @@
+{
+  "conditions": ["isMobile"],
+  "widgetFactory": {
+    "DateEdit": "cls.DateEditMobileWidget",
+    "DateTimeEdit": "cls.DateTimeEditMobileWidget",
+    "TimeEdit": "cls.TimeEditMobileWidget",
+    "SpinEdit": "cls.SpinEditMobileWidget"
+  }
+}

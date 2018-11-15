@@ -1,0 +1,7 @@
+{
+  "theme-table-default-widget": "listview",
+  "theme-hbox-enable-splitView": true,
+  "theme-font-size-ratio": 1.1,
+  "theme-field-height-ratio": 1.1,
+  "gbc-SliderWidget-field-height-ratio": 1.6
+}
