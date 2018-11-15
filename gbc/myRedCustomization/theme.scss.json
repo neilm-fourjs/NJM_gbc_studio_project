@@ -1,0 +1,6 @@
+{
+
+  "theme-primary-emphasis-background-color": "$mt-blue-500",
+  "theme-primary-faded-background-color": "$mt-blue-100",
+  "theme-secondary-color": "$mt-grey-600"
+}
