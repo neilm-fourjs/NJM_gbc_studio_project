@@ -1,0 +1,8 @@
+{
+	"theme-primary-background-color": "#07436f",
+	"theme-primary-emphasis-background-color": "#1776b7",
+	"theme-primary-faded-background-color": "$mt-blue-100",
+	"theme-secondary-color": "$mt-grey-600",
+
+	"theme-sidebar-always-visible-min-width" : "999999px"
+}

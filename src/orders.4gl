@@ -58,12 +58,12 @@ MAIN
     BEFORE MENU
        CALL setup_actions(DIALOG,FALSE,FALSE)
 
-{		ON ACTION setUserName ATTRIBUTES(TEXT="setUserName")
+		ON ACTION setUserName ATTRIBUTES(TEXT="setUserName")
 			IF l_userName.getLength() < 1 THEN
 				PROMPT "Enter Username:" FOR l_userName
 			END IF
 			CALL ui.Interface.frontcall("mymodule","setTextById", ["user", NVL(l_userName,"not set")] , [l_res])
-			DISPLAY "Res:",l_res}
+			DISPLAY "Res:",l_res
 			--CALL fgl_winMessage("FrontCall Test",SFMT("Result: %1",l_res),"information")
 
     ON ACTION new

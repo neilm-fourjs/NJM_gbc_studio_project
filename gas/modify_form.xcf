@@ -3,6 +3,6 @@
  <UA_OUTPUT>
   <PROXY>$(res.uaproxy.cmd)</PROXY>
     <PUBLIC_IMAGEPATH>$(res.public.resources)</PUBLIC_IMAGEPATH>
-    <GBC>myred</GBC>
+    <GBC>myCustomization</GBC>
   </UA_OUTPUT>
 </APPLICATION>

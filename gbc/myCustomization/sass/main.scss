@@ -1,0 +1,37 @@
+
+BODY {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	color: #58595B;
+	margin: 0px 0px 0px 0px;
+
+	background-image: url(./resources/img/otis_redding.png);
+	background-position: 0px 0px;
+	background-repeat: repeat;
+}
+
+.vanished {
+	width: 1px; 
+}
+
+.gbc_ToolBarWidget .mt-tab-previous, .gbc_ToolBarWidget .mt-tab-next .vanished { 
+	width: 1px; 
+}
+
+
+.gbc_style_important {
+	font-weight: bold !important;
+	color: blue !important;
+	background-color: yellow !important;
+}
+
+.mt-tab-titles-container {
+	color: cornflowerblue;
+}
+
+
+.gbc_ApplicationHostMenuBookmarkWidget {
+	display: none !important;
+}
